@@ -1,0 +1,43 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Note Taking App</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="jquery-3.7.1.js"></script>
+    <script type="text/javascript" src="note.js"></script>
+  </head>
+  <body>
+    <h1>Elijah Note Taking Application</h1>
+    <div id="wrapper">
+      <div id="flyer"></div>
+      <div id="dashboard">
+       
+          <div class="input-panel">
+            <h2>Add a Note</h2>
+            <textarea id="id_noteform" placeholder="Enter your note, select position & add"></textarea>
+            <label for="position">Position:</label>
+            <input type="number" id="position" min="1" max="999">
+            <button onclick="createNote()">Add Note</button>
+
+            <div class="control-panel">
+                <h2>Control Notes Panel</h2>
+                <label for="noteNumber">Select Note:</label>
+                <input type="number" id="noteNumber" min="1" max="999">
+                <button onclick="removeNote()">Remove Note</button>
+                <button onclick="markAsImportant()">Mark Important</button><br>
+                <button onclick="temporarilyRemove()">Detach Note</button><br>
+                <button onclick="restorePara()">Restore</button><br>
+                <button id="btn_getRidOf" onclick="getRidOfAll()">Delete all</button>
+            </div>
+          </div>
+        
+          
+ 
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+    
