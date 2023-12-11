@@ -1,0 +1,126 @@
+body{
+    background-image: url('https://images.unsplash.com/photo-1485095329183-d0797cdc5676?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+*{
+    box-sizing: border-box;
+}
+h1 {
+    color: #eaeaea;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.container {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: left;
+}
+#popularMovies {
+    margin-top: 50px;
+  }
+  
+  #popularMoviesList {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .movie {
+    list-style-type: none;
+    background-color: #eaeaea;
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      'title image'
+      'releaseDate image'
+      'button image';
+    text-align: left;
+  }
+  
+  .movie > h2 {
+    grid-area: title;
+    margin-bottom: 5px;
+    
+  }
+  
+  .movie > img {
+    max-height: 150px;
+    grid-area: image;
+  }
+  
+  .movie > p {
+    grid-area: releaseDate;
+    margin-top: -9px;
+  }
+  #popularMoviesSearchBar {
+    width: 30%;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid #eaeaea;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+#popularMoviesSearchWrapper {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#popularMoviesSearchWrapper::after {
+    position: absolute;
+    top: 7px;
+    right: 15px;
+    
+}
+button {
+    width: 100px; 
+    height: 35px; 
+    font-size: 16px;
+    background-color: #ff0048;
+    border-radius: 3px;
+    cursor: pointer; 
+    color: white;
+    border: none;
+    
+}
+
+#watchlistSection h1 {
+    margin-top: 95px;
+}
+
+#watchlist li {
+    padding: 10px; 
+    margin-bottom: 30px;
+    color: #df1e1e;
+}
+
+#popularMoviesSearchWrapper a {
+    display: inline-block;
+    text-decoration: none; 
+    color: #fff; 
+    background-color: #ff0048;
+    padding: 8px 16px;
+    border-radius: 4px; 
+    margin-left: 110px; 
+    cursor: pointer; 
+    width: 20%;
+    text-align: center;
+}
+#notification {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
